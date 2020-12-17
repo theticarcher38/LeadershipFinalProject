@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script async type="text/javascript" src="/assets/jquery.js"></script>
+    <script async type="text/javascript" src="/javascript/index.js"></script>
+    <title>Intrinsic vs. Extrinsic</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="left-side"></div>
+
+        <div class="main">
+            <div class="splash-screen" id="splash-screen">
+                <h1 class="welcome-header">
+                    Extrinsic Motivation
+                    <br> 
+                    vs.
+                    <br>
+                    Intrinsic Motivation
+                </h1>
+                <br>
+                <img class="splash-banner" src="/assets/intrinsicExtrinsicMotivationBanner.jpg">
+                <button class="play btn" id="play" onclick="startGame()">Play</button>
+                <br>
+                <button class="htp-btn btn" id="how-to-play" onclick="htp()">How to Play</button>
+            </div>
+
+            <div class="htp" id="htp">
+                <button class="main-menu btn" id="mainMenu" onclick="mainMenu()">Main Menu</button>
+                <p class="htp-text">
+                    The whole premise of this game is to learn about extrinsic and intrinsic
+                    motivation
+                    <br>
+                    There are 5 levels to complete.
+                    <br>
+                    Each level has a scenario that outlines either intrinsic or extrinsic motivation
+                    <br>
+                    You must select the button of the type of motivation that the scenario is depicting.
+                </p>
+            </div>
+
+            <div class="game" id="game">
+                <button class="main-menu btn" id="mainMenu" onclick="mainMenu()">Main Menu</button>
+
+                <div class="lvl-one" id="lvl-one">
+                    <p class="scenario">
+                        You are at your workplace, and your boss incentivizes all employees 
+                        to work harder by offering a bonus to all employees who show an 
+                        increase in productivity. This is an example of which type of motivation?
+                    </p>
+                    <button class="intrinsic btn" id="intrinsic" onclick="lvlOneWrongAnswer()">Intrinsic</button> 
+                    <button class="extrinsic btn" id="extrinsic" onclick="lvlOneCorrectAnswer()">Extrinsic</button>
+                    <p class="lvl-one-hint-text hint" id="lvl-one-hint-text">
+                        Unfortunately that is not the correct answer. This would be an extrinsic form of
+                        motivation since the motivation is coming from an incentive offered by your boss.
+                    </p>
+                </div>
+
+                <div class="lvl-two" id="lvl-two">
+                    <p class="scenario">
+                        You are studying for a test, and the only factor that is motivating you
+                        to keep studying is a fear of failure. Is this a form of extrinsic or intrinsic
+                        motivation?
+                    </p>
+                    <button class="intrinsic btn" id="intrinsic" onclick="lvlTwoWrongAnswer()">Intrinsic</button> 
+                    <button class="extrinsic btn" id="extrinsic" onclick="lvlTwoCorrectAnswer()">Extrinsic</button>
+                    <p class="lvl-two-hint-text hint" id="lvl-two-hint-text">
+                        While it is technically you motivating yourself to keep studying, this would still
+                        be a form of extrinsic motivation as it is a fear of failure that is motivating you 
+                        to study.
+                    </p>
+                </div>
+
+                <div class="lvl-three" id="lvl-three">
+                    <p class="scenario">
+                        You are working on a project, and your motivation to keep you going is 
+                        the fact that you enjoy the topic that the project is covering. What type 
+                        of motivation is this?
+                    </p>
+                    <button class="intrinsic btn" id="intrinsic" onclick="lvlThreeCorrectAnswer()">Intrinsic</button> 
+                    <button class="extrinsic btn" id="extrinsic" onclick="lvlThreeWrongAnswer()">Extrinsic</button>
+                    <p class="lvl-three-hint-text hint" id="lvl-three-hint-text">
+                        This would be intrinsic motivation as the motivation for the project comes from an inner desire
+                        to do the project.
+                    </p>
+                </div>
+
+                <div class="lvl-four" id="lvl-four">
+                    <p class="scenario">
+                        You are helping someone out for the sole purpose of receiving praise from
+                        family and friends. What type of motivation is this?
+                    </p>
+                    <button class="intrinsic btn" id="intrinsic" onclick="lvlFourWrongAnswer()">Intrinsic</button> 
+                    <button class="extrinsic btn" id="extrinsic" onclick="lvlFourCorrectAnswer()">Extrinsic</button>
+                    <p class="lvl-four-hint-text hint" id="lvl-four-hint-text">
+                        This is extrinsic motivation since you are helping someone out in order to receive praise which
+                        is an external reward.
+                    </p>
+                </div>
+
+                <div class="lvl-five" id="lvl-five">
+                    <p class="scenario">
+                        You feel motivated to participate is a certain sport because you find that sport to be fun.
+                        What type of motivation is this?
+                    </p>
+                    <button class="intrinsic btn" id="intrinsic" onclick="lvlFiveCorrectAnswer()">Intrinsic</button> 
+                    <button class="extrinsic btn" id="extrinsic" onclick="lvlFiveWrongAnswer()">Extrinsic</button>
+                    <p class="lvl-five-hint-text hint" id="lvl-five-hint-text">
+                        This would be intrinsic motivation because you are participating in the sport because you think
+                        that it is fun.
+                    </p>
+                </div>
+
+                <div class="end-page" id="end-page">
+                    <p id="correct-answers"></p>
+                    <br>
+                    <p id="wrong-answers"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side"></div>
+    </div>
+</body>
+
+</html>
